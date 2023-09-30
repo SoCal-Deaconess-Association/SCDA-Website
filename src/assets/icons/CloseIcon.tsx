@@ -11,7 +11,7 @@ const SvgComponent = (props) => (
         <path
             d="M4.765 5.112h17.07v15.745H4.765z"
             style={{
-                fill: "#f8f9fa",
+                fill: "#eff8f9",
                 fillOpacity: 1,
                 fillRule: "evenodd",
                 stroke: "none",
