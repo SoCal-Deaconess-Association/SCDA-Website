@@ -9,14 +9,20 @@ import { Header } from '../components/Header';
 
 // Pages
 import { HistoryPage } from '../pages/History.page';
+import { GreetingsPage } from '../pages/Greetings.page';
+import { AnthemPage } from '../pages/Anthem.page';
 
 export const App = () => {
     return (
         <ErrorBoundary FallbackComponent={ErrorFallback}>
             <Header />
-            <Routes>
-                <Route path="/*" element={<HistoryPage />} />
-            </Routes>
+            <main>
+                <Routes>
+                    <Route path="/*" element={<HistoryPage />} />
+                    <Route path="/greetings" element={<GreetingsPage />} />
+                    <Route path="/anthem" element={<AnthemPage />} />
+                </Routes>
+            </main>
         </ErrorBoundary>
     )
 }
