@@ -19,8 +19,9 @@ export const HistoryPage = () => {
         <div className='content-container shadow'>
             <h1>Part I: History</h1>
             <div className='divider'></div>
-            <VideoPlayer />
-            <Link to='/greetings' className='button-continue'>Continue to Part II<ContinueIcon /></Link>
+            <VideoPlayer videoID={'ih3YX4Abh4g'} />
+            <Link to='/greetings' className='button-continue-part2'>Continue to Part II<ContinueIcon /></Link>
+
         </div>
     );
 }

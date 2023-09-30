@@ -6,6 +6,7 @@ import { ErrorFallback } from '../components/ErrorFallback';
 
 // Components
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 // Pages
 import { HistoryPage } from '../pages/History.page';
@@ -22,6 +23,7 @@ export const App = () => {
                     <Route path="/greetings" element={<GreetingsPage />} />
                     <Route path="/anthem" element={<AnthemPage />} />
                 </Routes>
+                <Footer />
             </main>
         </ErrorBoundary>
     )

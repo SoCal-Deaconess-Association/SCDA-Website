@@ -12,7 +12,7 @@ const SvgComponent = (props) => (
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="m1 11.99 5-5-5-5m7 10 5-5-5-5"
+            d="m13 11.99-5-5 5-5m-7 10-5-5 5-5"
         />
     </svg>
 )

@@ -1,8 +1,6 @@
-import React from 'react';
 import YouTube from 'react-youtube';
 
-export const VideoPlayer = () => {
-    const videoId = 'ih3YX4Abh4g';
+export const VideoPlayer = ({ videoID }) => {
 
     const opts = {
         width: '100%',
@@ -16,7 +14,7 @@ export const VideoPlayer = () => {
 
     return (
         <div className="video-player-container">
-            <YouTube videoId={videoId} opts={opts} className="youtube-player" />
+            <YouTube videoId={videoID} opts={opts} className="youtube-player" />
         </div>
     );
 };
