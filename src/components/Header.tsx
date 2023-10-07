@@ -56,7 +56,7 @@ export const Header = () => {
                 {/* Navigation Menu Button (Mobile)*/}
                 {isMobile && (
                     isNavbarVisible ? (
-                        <CloseIcon className="hamburger-button hover-pointer z-5" style={{ padding: '10px' }} onClick={toggleNavbar} />
+                        <CloseIcon className="close-button hover-pointer z-5" style={{ padding: '10px' }} onClick={toggleNavbar} />
                     ) : (
                         <MenuIcon className="hamburger-button hover-pointer z-5" onClick={toggleNavbar} />
                     )
