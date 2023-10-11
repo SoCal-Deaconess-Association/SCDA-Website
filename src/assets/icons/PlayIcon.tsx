@@ -1,20 +1,28 @@
-type MenuIconProps = {
-  width?: string;
-  height?: string;
-  fill?: string;
-  className?: string;
-  style?: React.CSSProperties;
-};
+import * as React from "react";
 
-export const PlayIcon = (props: MenuIconProps) => (
+const SvgComponent = (props) => (
   <svg
-    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSvgIcon-fontSizeLarge css-zjt8k"
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-    data-testid="PlayCircleIcon"
-    tabIndex={-1}
+    xmlns="http://www.w3.org/2000/svg"
+    width={196.522}
+    height={196.522}
+    viewBox="0 0 3.93 3.93"
     {...props}
+    className="play-icon"
   >
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.5 16.5v-9l7 4.5-7 4.5z" />
+    <title>{"icn/play"}</title>
+    <g transform="scale(.29761)">
+      <circle
+        cx={6.603}
+        cy={6.603}
+        r={6.603}
+        className="circle-fill"
+      />
+      <path
+        d="M5.036 10.606a.51.51 0 0 1-.72-.18.569.569 0 0 1-.077-.288V3.324c0-.303.234-.548.524-.548a.506.506 0 0 1 .273.081l5.283 3.407a.564.564 0 0 1 0 .935"
+        className="path-fill"
+      />
+    </g>
   </svg>
 );
+
+export default SvgComponent;

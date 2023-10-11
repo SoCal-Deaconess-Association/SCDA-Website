@@ -6,6 +6,10 @@ const SvgComponent = (props) => (
         height={800}
         viewBox="0 0 26 26"
         {...props}
+        style={{
+            filter: "drop-shadow(0 0 10px rgba(54, 55, 58, 0.527))",
+            padding: "7px",
+        }}
     >
         <path
             d="M4.765 5.112h17.07v15.745H4.765z"

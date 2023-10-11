@@ -29,7 +29,7 @@ export const Header = () => {
         <div>
             {/* Overlay for navbar */}
             {isMobile && isNavbarVisible && (
-                <div className="overlay z-1" onClick={toggleNavbar}></div>
+                <div className="overlay z-2" onClick={toggleNavbar}></div>
             )}
 
             {/* Header */}
@@ -46,7 +46,7 @@ export const Header = () => {
 
                 {/* Navigation Bar (Tablet/Desktop)*/}
                 {(isTablet || isDesktop) && (
-                    <div className='nav-desktop flex-center-xy'>
+                    <div className='nav-desktop flex-center-xy z-5'>
                         <Link to='/' className='shadow flex-center-xy'><HistoryIcon />History</Link>
                         <Link to='/greetings' className='shadow flex-center-xy'><GreetingsIcon />Greetings & Stories</Link>
                         <Link to='/anthem' className='shadow flex-center-xy'><AnthemIcon />Anthem</Link>

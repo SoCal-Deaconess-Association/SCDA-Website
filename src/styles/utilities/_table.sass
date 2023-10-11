@@ -13,7 +13,7 @@
         display: flex
         flex-direction: row
         width: 100%
-        padding: 10px
+        padding: 5px 10px
         position: sticky
 
     .table-rows
@@ -42,8 +42,44 @@
     p
         color: $color-black
 
+    svg
+        width: 40px
+        height: 45px
+        cursor: pointer
+
+        &:hover
+            fill: $color-teal-dark
+
     .name
         font-weight: bold
+
+    .table-footer
+        display: flex
+        flex-direction: row
+        width: 100%
+        padding: 5px 10px
+        position: sticky
+
+.play-icon
+    filter: drop-shadow(0 0 2px rgba(54, 55, 58, 0.35))
+    cursor: pointer
+
+    .circle-fill
+        fill: #f87d9a
+        transition: fill 0.25s ease
+
+    .path-fill
+        fill: #eff8f9
+        transition: fill 0.25s ease, transform 0.25s ease
+        transform: scale(1)
+
+    &:hover
+        .circle-fill
+            fill: $color-teal-light
+
+        .path-fill
+            fill: #eff8f9
+            transform: scale(0.8) translateX(1.5px) translateY(1.5px)
 
 @media screen and (max-width: 767px)
     .table

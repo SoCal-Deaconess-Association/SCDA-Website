@@ -32,6 +32,74 @@
             filter: blur(0px)
             transform: translateX(124px)
 
+// Continue to Part III
+.button-continue-part3
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $color-pink-dark
+    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
+    border-radius: 10px
+    padding: 10px
+    color: $color-white
+    font-size: 25px
+    font-weight: bold
+    transition: padding-right 0.3s, background-color 0.3s, transform 0.3s
+    margin: 4px 0 -14px 0
+
+    svg
+        position: absolute
+        height: 25px
+        width: 25px
+        margin-left: 10px
+        opacity: 0
+        filter: blur(5px)
+        transition: opacity 0.3s, transform 0.3s, filter 0.3s
+        transform: translateX(90px)
+
+    &:hover
+        background-color: $color-teal-light
+        padding-right: 50px
+
+        svg
+            opacity: 1
+            filter: blur(0px)
+            transform: translateX(126px)
+
+// Back to Part I
+.button-back-part1
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $color-pink-dark
+    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
+    border-radius: 10px
+    padding: 10px
+    color: $color-white
+    font-size: 25px
+    font-weight: bold
+    transition: padding-left 0.3s, background-color 0.3s, transform 0.3s
+    margin: 4px 0 -14px 0
+
+    svg
+        position: absolute
+        height: 25px
+        width: 25px
+        margin-left: 10px
+        opacity: 0
+        transition: opacity 0.3s, transform 0.3s, filter 0.3s
+        transform: translateX(-70px)
+        filter: blur(5px)
+
+    &:hover
+        background-color: $color-teal-light
+        padding-left: 46px
+
+        svg
+            opacity: 1
+            filter: blur(0px)
+            transform: translateX(-102px)
+
 // Back to Part II
 .button-back-part2
     display: flex
@@ -65,3 +133,70 @@
             opacity: 1
             filter: blur(0px)
             transform: translateX(-108px)
+
+// Part I
+.button-part1
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $color-pink-dark
+    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
+    border-radius: 10px
+    padding: 10px
+    color: $color-white
+    font-size: 25px
+    font-weight: bold
+    transition: padding-left 0.3s, background-color 0.3s, transform 0.3s
+    margin: 4px 0 -14px 0
+    svg
+        position: absolute
+        height: 25px
+        width: 25px
+        margin-left: 10px
+        opacity: 0
+        transition: opacity 0.3s, transform 0.3s, filter 0.3s
+        transform: translateX(-18px)
+        filter: blur(5px)
+
+    &:hover
+        background-color: $color-teal-light
+        padding-left: 45px
+
+        svg
+            opacity: 1
+            filter: blur(0px)
+            transform: translateX(-57px)
+
+// Part III
+.button-part3
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $color-pink-dark
+    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
+    border-radius: 10px
+    padding: 10px
+    color: $color-white
+    font-size: 25px
+    font-weight: bold
+    transition: padding-right 0.3s, background-color 0.3s, transform 0.3s
+    margin: 4px 0 -14px 0
+
+    svg
+        position: absolute
+        height: 25px
+        width: 25px
+        margin-left: 10px
+        opacity: 0
+        transition: opacity 0.3s, transform 0.3s, filter 0.3s
+        transform: translateX(18px)
+        filter: blur(5px)
+
+    &:hover
+        background-color: $color-teal-light
+        padding-right: 48px
+
+        svg
+            opacity: 1
+            filter: blur(0px)
+            transform: translateX(56px)

@@ -21,7 +21,6 @@ export const HistoryPage = () => {
             <div className='divider'></div>
             <VideoPlayer videoID={'ih3YX4Abh4g'} />
             <Link to='/greetings' className='button-continue-part2'>Continue to Part II<ContinueIcon /></Link>
-
         </div>
     );
 }
