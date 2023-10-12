@@ -1,11 +1,10 @@
+// Import React features
+import { Link } from 'react-router-dom';
+
 // Import images
 import PlayIcon from '../assets/icons/PlayIcon';
 
-export const TableRow = ({ greeter, onPlayClick }) => {
-    const handlePlayClick = () => {
-        onPlayClick();
-    };
-
+export const TableRow = ({ greeter }) => {
     return (
         <div className='table-row'>
             <div className='table-cell'>
@@ -18,7 +17,9 @@ export const TableRow = ({ greeter, onPlayClick }) => {
                 <p>{greeter.province}</p>
             </div>
             <div className='table-cell'>
-                <PlayIcon onClick={handlePlayClick} />
+                <Link to={`/greetings/${greeter.id}`}>
+                    <PlayIcon />
+                </Link>
             </div>
         </div>
     );

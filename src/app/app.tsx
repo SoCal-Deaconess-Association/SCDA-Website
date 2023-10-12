@@ -11,6 +11,7 @@ import { Footer } from '../components/Footer';
 // Pages
 import { HistoryPage } from '../pages/History.page';
 import { GreetingsPage } from '../pages/Greetings.page';
+import { GreeterPage } from '../pages/Greeter.page';
 import { AnthemPage } from '../pages/Anthem.page';
 
 export const App = () => {
@@ -21,6 +22,7 @@ export const App = () => {
                 <Routes>
                     <Route path="/*" element={<HistoryPage />} />
                     <Route path="/greetings" element={<GreetingsPage />} />
+                    <Route path="/greetings/:id" element={<GreeterPage />} />
                     <Route path="/anthem" element={<AnthemPage />} />
                 </Routes>
                 <Footer />

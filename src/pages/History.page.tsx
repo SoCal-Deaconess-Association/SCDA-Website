@@ -9,14 +9,8 @@ import { VideoPlayer } from '../components/VideoPlayer';
 import ContinueIcon from '../assets/icons/ContinueIcon';
 
 export const HistoryPage = () => {
-    const navigate = useNavigate();
-
-    //useEffect(() => {
-    //    navigate('/history');
-    //}, []);
-
     return (
-        <div className='content-container shadow'>
+        <div className='card shadow'>
             <h1>Part I: History</h1>
             <div className='divider'></div>
             <VideoPlayer videoID={'ih3YX4Abh4g'} />

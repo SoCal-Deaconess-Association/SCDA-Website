@@ -1,9 +1,10 @@
-
 export type Greeter = {
     id: number;
     name: string;
     year: number | null;
     province: Province;
+    video: string;
+    map: string;
 };
 
 export enum Province {
@@ -22,131 +23,164 @@ export enum Province {
 
 export const Greeters: Greeter[] = [
     {
-        id: 0,
+        id: 1,
         name: 'Agnes Dauz Cadlaon',
         year: 1981,
         province: Province.pangasinan,
-    },
-
-    {
-        id: 1,
-        name: 'Alice Pinky Ramirez Oreas',
-        year: 1987,
-        province: Province.pangasinan,
+        video: 'nW-0ltKiihk',
+        map: 'Pangasinan',
     },
 
     {
         id: 2,
-        name: 'Araceli Gorospe Lambinicio',
-        year: 1961,
-        province: Province.pampanga,
+        name: 'Alice Pinky Ramirez Oreas',
+        year: 1987,
+        province: Province.pangasinan,
+        video: '0W1DXrWKgIA',
+        map: 'NuevaEcija',
     },
 
     {
         id: 3,
-        name: 'Brenda Faye Reyes DePano',
-        year: 1983,
-        province: Province.nuevaEcija,
-
+        name: 'Araceli Gorospe Lambinicio',
+        year: 1961,
+        province: Province.pampanga,
+        video: 'JQ-hGgHnfkU',
+        map: 'NuevaEcijaZambales'
     },
 
     {
         id: 4,
-        name: 'Crispina Estaris',
-        year: 1954,
-        province: Province.cagayan,
+        name: 'Brenda Faye Reyes DePano',
+        year: 1983,
+        province: Province.nuevaEcija,
+        video: 'ruwI5LtLRik',
+        map: null
     },
 
     {
         id: 5,
-        name: 'Edna Soriano Santos',
-        year: 1959,
-        province: Province.manila,
-
+        name: 'Crispina Estaris',
+        year: 1954,
+        province: Province.cagayan,
+        video: 'zd98LgqBE_k',
+        map: null
     },
 
     {
         id: 6,
-        name: 'Eunice Bautista Laureano',
-        year: 1955,
-        province: Province.bataan,
+        name: 'Edna Soriano Santos',
+        year: 1959,
+        province: Province.manila,
+        video: 'R04A61eibZs',
+        map: null
     },
 
     {
         id: 7,
-        name: 'Fe Isabel Cruz Gorospe',
-        year: 1957,
-        province: Province.manila,
-
+        name: 'Eunice Bautista Laureano',
+        year: 1955,
+        province: Province.bataan,
+        video: 'LdbiHvpe21s',
+        map: null
     },
 
     {
         id: 8,
-        name: 'Helen Rabina Sicat',
-        year: null,
-        province: Province.tarlac,
+        name: 'Fe Isabel Cruz Gorospe',
+        year: 1957,
+        province: Province.manila,
+        video: 'E9c87o7XdPU',
+        map: null
     },
 
     {
         id: 9,
-        name: 'Lila Valencia Lusung',
-        year: 1952,
+        name: 'Helen Rabina Sicat',
+        year: null,
         province: Province.tarlac,
+        video: 'WZ7XEu7VfLU',
+        map: null
     },
 
     {
         id: 10,
-        name: 'Noemi Bagasin Villanueva',
-        year: 1983,
-        province: Province.cagayan,
+        name: 'Lila Valencia Lusung',
+        year: 1952,
+        province: Province.tarlac,
+        video: '3MMnPVWWiuw',
+        map: null
     },
 
     {
         id: 11,
-        name: 'Olive Asis Dugay',
-        year: 1981,
-        province: Province.nuevaVizcaya,
+        name: 'Noemi Bagasin Villanueva',
+        year: 1983,
+        province: Province.cagayan,
+        video: 'baHKDQeQjDk',
+        map: null
     },
 
     {
         id: 12,
-        name: 'Pacita Gomintong DelAmen',
-        year: 1967,
-        province: Province.llocosSur,
+        name: 'Olive Asis Dugay',
+        year: 1981,
+        province: Province.nuevaVizcaya,
+        video: 'JpNm8uFMVuQ',
+        map: null
     },
 
     {
         id: 13,
-        name: 'Rosario Nicolas Pangilinan',
-        year: 1963,
-        province: Province.bulacan,
+        name: 'Pacita Gomintong DelAmen',
+        year: 1967,
+        province: Province.llocosSur,
+        video: 'E334hDk7L2w',
+        map: null
     },
 
     {
         id: 14,
-        name: 'Fabiola Sanchez Carreon',
-        year: 1973,
-        province: Province.pampanga,
+        name: 'Rosario Nicolas Pangilinan',
+        year: 1963,
+        province: Province.bulacan,
+        video: '9uJGq3gzRjY',
+        map: null
     },
 
     {
         id: 15,
-        name: 'Cecil Bucud Arceo',
-        year: 1996,
+        name: 'Fabiola Sanchez Carreon',
+        year: 1973,
         province: Province.pampanga,
+        video: 'Q5jruwiClJ8',
+        map: null
     },
 
     {
         id: 16,
-        name: 'Erlinda Villanueva Pastrana',
-        year: 1961,
-        province: Province.camarinesSur,
+        name: 'Cecil Bucud Arceo',
+        year: 1996,
+        province: Province.pampanga,
+        video: 'yYNAn8z3I7Y',
+        map: null
     },
 
     {
         id: 17,
+        name: 'Erlinda Villanueva Pastrana',
+        year: 1961,
+        province: Province.camarinesSur,
+        video: 'kqqbl59kWyI',
+        map: null
+    },
+
+    {
+        id: 18,
         name: 'Perla Cunanan Baker',
         year: 1971,
         province: Province.tarlac,
+        video: 'LonZ5Pu3u4M',
+        map: null
     },
 ];

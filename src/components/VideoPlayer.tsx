@@ -1,3 +1,4 @@
+// Import React features
 import YouTube from 'react-youtube';
 
 export const VideoPlayer = ({ videoID }) => {

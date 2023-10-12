@@ -1,3 +1,4 @@
+// Import React features
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
@@ -7,21 +8,15 @@ import { useMediaQuery } from 'react-responsive';
 import { TableRow } from '../components/TableRow';
 import BackIcon from '../assets/icons/BackIcon';
 import ContinueIcon from '../assets/icons/ContinueIcon';
-import { Greeting } from '../components/Greeting';
 
+// Import utils
 import { Greeters } from '../utils/greeters.utils';
 
 export const GreetingsPage = () => {
-    const [isGreetingVisible, setIsGreetingVisible] = useState(false);
-
-    const showGreetingPopup = () => {
-        setIsGreetingVisible(true);
-    };
-
     const isMobile = useMediaQuery({ maxWidth: 590 });
 
     return (
-        <div className='content-container shadow greetings'>
+        <div className='card shadow greetings'>
             <h1>Part II: Greetings & Stories</h1>
             <div className='divider'></div>
             <div className='table'>
@@ -41,7 +36,7 @@ export const GreetingsPage = () => {
                 </div>
                 <div className='table-rows custom-scrollbar'>
                     {Greeters.map((greeter) => (
-                        <TableRow key={greeter.id} greeter={greeter} onPlayClick={showGreetingPopup} />
+                        <TableRow key={greeter.id} greeter={greeter} />
                     ))}
                 </div>
                 <div className='table-footer shadow'>
@@ -62,8 +57,6 @@ export const GreetingsPage = () => {
                         )}
                     </div>
                 </div>
-
-                {isGreetingVisible && <Greeting />}
             </div>
         </div>
     );
