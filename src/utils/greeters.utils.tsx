@@ -1,10 +1,14 @@
+import map1 from '../assets/maps/map_1.jpg';
+import map2 from '../assets/maps/map_2.jpg';
+import map3 from '../assets/maps/map_3.jpg';
+
 export type Greeter = {
     id: number;
     name: string;
     year: number | null;
     province: Province;
     video: string;
-    map: string;
+    map: string | null;
 };
 
 export enum Province {
@@ -28,7 +32,7 @@ export const Greeters: Greeter[] = [
         year: 1981,
         province: Province.pangasinan,
         video: 'nW-0ltKiihk',
-        map: 'Pangasinan',
+        map: map1,
     },
 
     {
@@ -37,7 +41,7 @@ export const Greeters: Greeter[] = [
         year: 1987,
         province: Province.pangasinan,
         video: '0W1DXrWKgIA',
-        map: 'NuevaEcija',
+        map: map2,
     },
 
     {
@@ -46,7 +50,7 @@ export const Greeters: Greeter[] = [
         year: 1961,
         province: Province.pampanga,
         video: 'JQ-hGgHnfkU',
-        map: 'NuevaEcijaZambales'
+        map: map3,
     },
 
     {

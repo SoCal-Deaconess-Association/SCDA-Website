@@ -2,10 +2,72 @@
     .content
         height: 100%
         width: 100%
+        display: flex
+        flex-direction: row
 
     .content-left
-        padding: 10px
+        padding-right: 10px
+        width: 75%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
 
-    .map
-        border-radius: 10px
-        box-shadow: 0 0 7px rgba(54, 55, 58, 0.216)
+        .story
+            background-color: $color-pink-darker
+            display: flex
+            justify-content: center
+            align-items: center
+
+            box-shadow: 0 2px 5px rgba(54, 55, 58, 0.411)
+            border-radius: 10px
+            padding: 20px
+            color: $color-white
+            font-size: 25px
+            font-weight: bold
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.2s
+            cursor: pointer
+
+            svg
+                margin-right: 10px
+                height: 25px
+                width: 25px
+
+            &:hover
+                background-color: $color-teal-light
+                transform: translateY(2px)
+                box-shadow: 0 0px 3px rgba(54, 55, 58, 0.64)
+                transition: transform 0.1s, box-shadow 0.1s
+
+    .content-right
+        padding-top: 10px
+        padding-left: 10px
+        width: 35%
+        height: 100%
+
+        h2
+            font-size: 24px
+            text-align: center
+
+        .map
+            // border-radius: 10px
+            // box-shadow: 0 0 7px rgba(54, 55, 58, 0.216)
+            width: 100%
+            height: auto
+
+@media screen and (max-width: 920px)
+    .greeter-page
+        .content-right
+            h2
+                font-size: 22px
+
+@media screen and (max-width: 820px)
+    .greeter-page
+        .content-right
+            h2
+                font-size: 18px
+
+@media screen and (max-width: 767px)
+    .greeter-page
+        .content-left
+            width: 100%
