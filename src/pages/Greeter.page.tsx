@@ -4,16 +4,17 @@ import { useMediaQuery } from 'react-responsive';
 
 // Import components
 import { VideoPlayer } from '../components/VideoPlayer';
+
 import StoryIcon from '../assets/icons/StoryIcon';
+import BackIcon from '../assets/icons/BackIcon2';
 
 // Import utils
 import { Greeters } from '../utils/greeters.utils';
 
-
-
 export const GreeterPage = () => {
     // Responsive breakpoints
     const isMobile = useMediaQuery({ maxWidth: 767 });
+    const flexBreak = useMediaQuery({ maxWidth: 830 });
 
     // Gets greeter ID from route parameters
     const { id } = useParams();
@@ -49,34 +50,40 @@ export const GreeterPage = () => {
                 {/* Content Left */}
                 <div className='content-left'>
                     <VideoPlayer videoID={greeter.video} />
-                    <div>
-                        <Link to='/greetings'>
-                            Back to Greeters
-                        </Link>
-
-                        {prevGreeterId !== null ? (
-                            <Link to={`/greetings/${prevGreeterId}`} className="previous">
-                                Previous
+                    <div className='buttons'>
+                        <div className='row'>
+                            <Link to='/greetings' className="back">
+                                <BackIcon />Back to Greeters
                             </Link>
-                        ) : (
-                            <span className='previous'>
-                                Previous
-                            </span>
-                        )}
 
-                        {nextGreeterId !== null ? (
-                            <Link to={`/greetings/${nextGreeterId}`} className="next">
-                                Next
-                            </Link>
-                        ) : (
-                            <span className='previous'>
-                                Next
-                            </span>
-                        )}
+                            {flexBreak && (
+                                <div className='flex-break'></div>
+                            )}
+
+                            {prevGreeterId !== null ? (
+                                <Link to={`/greetings/${prevGreeterId}`} className="previous">
+                                    Previous
+                                </Link>
+                            ) : (
+                                <span className='previous'>
+                                    Previous
+                                </span>
+                            )}
+
+                            {nextGreeterId !== null ? (
+                                <Link to={`/greetings/${nextGreeterId}`} className="next">
+                                    Next
+                                </Link>
+                            ) : (
+                                <span className='previous'>
+                                    Next
+                                </span>
+                            )}
+                        </div>
+                        <span className='story'>
+                            <StoryIcon />Story
+                        </span>
                     </div>
-                    <span className='story'>
-                        <StoryIcon />Story
-                    </span>
                 </div>
 
                 {!isMobile && (
