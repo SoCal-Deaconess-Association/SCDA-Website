@@ -16,14 +16,13 @@ export const GreeterPage = () => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const flexBreak = useMediaQuery({ maxWidth: 830 });
 
-    // Gets greeter ID from route parameters
     const { id } = useParams();
 
-    // Convert id to an integer
-    const greeterId = parseInt(id, 10);
+    // Convert id to an integer with a default value of 0
+    const greeterId = parseInt(id || "0", 10);
 
     // Finds greeter with matching ID
-    const greeter = Greeters.find(greeter => greeter.id === parseInt(id, 10));
+    const greeter = Greeters.find((greeter) => greeter.id === greeterId);
 
     // If no greeter with matching ID is found:
     if (!greeter) {

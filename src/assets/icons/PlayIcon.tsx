@@ -1,12 +1,9 @@
-import * as React from "react";
-
-const SvgComponent = (props) => (
+const SvgComponent = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={196.522}
     height={196.522}
     viewBox="0 0 3.93 3.93"
-    {...props}
     className="play-icon"
   >
     <title>{"icn/play"}</title>

@@ -1,8 +1,11 @@
 // Import React features
 import YouTube from 'react-youtube';
 
-export const VideoPlayer = ({ videoID }) => {
+type VideoPlayerProps = {
+    videoID: string;
+};
 
+export const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoID }) => {
     const opts = {
         width: '100%',
         playerVars: {
@@ -19,3 +22,5 @@ export const VideoPlayer = ({ videoID }) => {
         </div>
     );
 };
+
+export default VideoPlayer;

@@ -1,11 +1,9 @@
 // Import React features
-import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 // Import components
-import { TableRow } from '../components/TableRow';
+import TableRow from '../components/TableRow';
 import BackIcon from '../assets/icons/BackIcon';
 import ContinueIcon from '../assets/icons/ContinueIcon';
 

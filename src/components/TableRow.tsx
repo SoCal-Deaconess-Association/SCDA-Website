@@ -1,10 +1,21 @@
-// Import React features
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Import images
+// Images
 import PlayIcon from '../assets/icons/PlayIcon';
 
-export const TableRow = ({ greeter }) => {
+type Greeter = {
+    id: number;
+    name: string;
+    year: number | null;
+    province: string;
+};
+
+type TableRowProps = {
+    greeter: Greeter;
+};
+
+const TableRow: React.FC<TableRowProps> = ({ greeter }) => {
     return (
         <div className='table-row'>
             <div className='table-cell'>
@@ -24,3 +35,5 @@ export const TableRow = ({ greeter }) => {
         </div>
     );
 };
+
+export default TableRow;

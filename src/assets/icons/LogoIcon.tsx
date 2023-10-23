@@ -1,10 +1,9 @@
-const SvgComponent = (props) => (
+const SvgComponent = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={500}
     height={500}
     viewBox="0 0 166.516 180.622"
-    {...props}
     style={{ filter: "drop-shadow(0 0 5px rgba(54, 55, 58, 0.25))" }}
   >
     <path

@@ -1,12 +1,10 @@
-import * as React from "react"
-const SvgComponent = (props) => (
+const SvgComponent = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width={470.004}
         height={361.932}
         data-name="Layer 3"
         viewBox="0 0 1204.386 927.451"
-        {...props}
     >
         <title />
         <path

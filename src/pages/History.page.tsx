@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+// React features
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
 
 // Components
 import { VideoPlayer } from '../components/VideoPlayer';

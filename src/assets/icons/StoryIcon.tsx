@@ -1,12 +1,10 @@
-
-const SvgComponent = (props) => (
+const SvgComponent = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={600.156}
     height={666.745}
     fill="none"
     viewBox="0 0 18.005 20.002"
-    {...props}
   >
     <path
       stroke="#000"
