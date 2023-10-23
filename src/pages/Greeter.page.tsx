@@ -65,7 +65,7 @@ export const GreeterPage = () => {
                                     Previous
                                 </Link>
                             ) : (
-                                <span className='previous'>
+                                <span className='previous greyed-out'>
                                     Previous
                                 </span>
                             )}
@@ -75,14 +75,14 @@ export const GreeterPage = () => {
                                     Next
                                 </Link>
                             ) : (
-                                <span className='previous'>
+                                <span className='previous greyed-out'>
                                     Next
                                 </span>
                             )}
                         </div>
-                        <span className='story'>
+                        <Link to={`/greetings/${greeter.id}/story`} className='story'>
                             <StoryIcon />Story
-                        </span>
+                        </Link>
                     </div>
                 </div>
 

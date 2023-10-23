@@ -12,6 +12,7 @@ import { Footer } from '../components/Footer';
 import { HistoryPage } from '../pages/History.page';
 import { GreetingsPage } from '../pages/Greetings.page';
 import { GreeterPage } from '../pages/Greeter.page';
+import { StoryPage } from '../pages/Story.page';
 import { AnthemPage } from '../pages/Anthem.page';
 
 export const App = () => {
@@ -23,6 +24,7 @@ export const App = () => {
                     <Route path="/*" element={<HistoryPage />} />
                     <Route path="/greetings" element={<GreetingsPage />} />
                     <Route path="/greetings/:id" element={<GreeterPage />} />
+                    <Route path="/greetings/:id/story" element={<StoryPage />} />
                     <Route path="/anthem" element={<AnthemPage />} />
                 </Routes>
                 <Footer />
