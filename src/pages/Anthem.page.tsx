@@ -13,7 +13,7 @@ export const AnthemPage = () => {
             <h1>Part III: Anthem</h1>
             <div className='divider'></div>
             <VideoPlayer videoID={'ZPeF3wIwuUw'} />
-            <Link to='/greetings' className='button-back-part2'>Back to Part II<BackIcon /></Link>
+            <Link to='/greetings' className='button-back-part2 no-highlight'>Back to Part II<BackIcon /></Link>
         </div>
     );
 }

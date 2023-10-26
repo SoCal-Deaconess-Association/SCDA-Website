@@ -40,18 +40,18 @@ export const GreetingsPage = () => {
                 <div className='table-footer shadow'>
                     <div className='table-cell'>
                         {isMobile && (
-                            <Link to='/' className='button-part1'>Part I<BackIcon /></Link>
+                            <Link to='/' className='button-part1 no-highlight'>Part I<BackIcon /></Link>
                         )}
                         {!isMobile && (
-                            <Link to='/' className='button-back-part1'>Back to Part I<BackIcon /></Link>
+                            <Link to='/' className='button-back-part1 no-highlight'>Back to Part I<BackIcon /></Link>
                         )}
                     </div>
                     <div className='table-cell'>
                         {isMobile && (
-                            <Link to='/anthem' className='button-part3'>Part III<ContinueIcon /></Link>
+                            <Link to='/anthem' className='button-part3 no-highlight'>Part III<ContinueIcon /></Link>
                         )}
                         {!isMobile && (
-                            <Link to='/anthem' className='button-continue-part3'>Continue to Part III<ContinueIcon /></Link>
+                            <Link to='/anthem' className='button-continue-part3 no-highlight'>Continue to Part III<ContinueIcon /></Link>
                         )}
                     </div>
                 </div>

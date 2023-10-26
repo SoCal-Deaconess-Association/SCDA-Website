@@ -28,11 +28,11 @@ const TableRow: React.FC<TableRowProps> = ({ greeter }) => {
                 <p>{greeter.province}</p>
             </div>
             <div className='table-cell'>
-                <Link to={`/greetings/${greeter.id}`}>
+                <Link to={`/greetings/${greeter.id}`} className='no-highlight'>
                     <PlayIcon />
                 </Link>
             </div>
-        </div>
+        </div >
     );
 };
 

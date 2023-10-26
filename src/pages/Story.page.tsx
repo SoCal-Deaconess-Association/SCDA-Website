@@ -31,7 +31,7 @@ export const StoryPage = () => {
                 title="Embedded PDF"
             ></iframe>
 
-            <Link to={`/greetings/${greeter.id}`} className='button'>Back</Link>
+            <Link to={`/greetings/${greeter.id}`} className='button no-highlight'>Back</Link>
         </div >
     );
 };

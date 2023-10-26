@@ -51,7 +51,7 @@ export const GreeterPage = () => {
                     <VideoPlayer videoID={greeter.video} />
                     <div className='buttons'>
                         <div className='row'>
-                            <Link to='/greetings' className="back">
+                            <Link to='/greetings no-highlight' className="back">
                                 <BackIcon />Back to Greeters
                             </Link>
 
@@ -60,7 +60,7 @@ export const GreeterPage = () => {
                             )}
 
                             {prevGreeterId !== null ? (
-                                <Link to={`/greetings/${prevGreeterId}`} className="previous">
+                                <Link to={`/greetings/${prevGreeterId}`} className="previous no-highlight">
                                     Previous
                                 </Link>
                             ) : (
@@ -70,7 +70,7 @@ export const GreeterPage = () => {
                             )}
 
                             {nextGreeterId !== null ? (
-                                <Link to={`/greetings/${nextGreeterId}`} className="next">
+                                <Link to={`/greetings/${nextGreeterId}`} className="next no-highlight">
                                     Next
                                 </Link>
                             ) : (
@@ -79,7 +79,7 @@ export const GreeterPage = () => {
                                 </span>
                             )}
                         </div>
-                        <Link to={`/greetings/${greeter.id}/story`} className='story'>
+                        <Link to={`/greetings/${greeter.id}/story`} className='story no-highlight'>
                             <StoryIcon />Story
                         </Link>
                     </div>

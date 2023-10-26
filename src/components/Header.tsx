@@ -46,18 +46,18 @@ export const Header = () => {
                 {/* Navigation Bar (Tablet/Desktop)*/}
                 {(isTablet || isDesktop) && (
                     <div className='nav-desktop flex-center-xy z-5'>
-                        <Link to='/' className='shadow flex-center-xy'><HistoryIcon />History</Link>
-                        <Link to='/greetings' className='shadow flex-center-xy'><GreetingsIcon />Greetings & Stories</Link>
-                        <Link to='/anthem' className='shadow flex-center-xy'><AnthemIcon />Anthem</Link>
+                        <Link to='/' className='shadow flex-center-xy no-highlight'><HistoryIcon />History</Link>
+                        <Link to='/greetings' className='shadow flex-center-xy no-highlight'><GreetingsIcon />Greetings & Stories</Link>
+                        <Link to='/anthem' className='shadow flex-center-xy no-highlight'><AnthemIcon />Anthem</Link>
                     </div>
                 )}
 
                 {/* Navigation Menu Button (Mobile)*/}
                 {isMobile && (
                     isNavbarVisible ? (
-                        <CloseIcon className="close-button hover-pointer z-5" style={{ padding: '10px' }} onClick={toggleNavbar} />
+                        <CloseIcon className="close-button hover-pointer z-5 no-highlight" style={{ padding: '10px' }} onClick={toggleNavbar} />
                     ) : (
-                        <MenuIcon className="hamburger-button hover-pointer z-5" onClick={toggleNavbar} />
+                        <MenuIcon className="hamburger-button hover-pointer z-5 no-highlight" onClick={toggleNavbar} />
                     )
                 )}
 
@@ -70,9 +70,9 @@ export const Header = () => {
             {/* Navigation Menu (Mobile)*/}
             {isMobile && (
                 <div className={`nav-mobile flex-column z-5`}>
-                    <Link to='/' className={`shadow flex-center-y ${isNavbarVisible ? 'show-right' : 'hide-right'}`} onClick={toggleNavbar}><HistoryIcon />Part I: History</Link>
-                    <Link to='/greetings' className={`shadow flex-center-y ${isNavbarVisible ? 'show-right' : 'hide-right'}`} onClick={toggleNavbar}><GreetingsIcon />Part II: Greetings</Link>
-                    <Link to='/anthem' className={`shadow flex-center-y ${isNavbarVisible ? 'show-right' : 'hide-right'}`} onClick={toggleNavbar}><AnthemIcon />Part III: Anthem</Link>
+                    <Link to='/' className={`no-highlight shadow flex-center-y ${isNavbarVisible ? 'show-right' : 'hide-right'}`} onClick={toggleNavbar}><HistoryIcon />Part I: History</Link>
+                    <Link to='/greetings' className={`no-highlight shadow flex-center-y ${isNavbarVisible ? 'show-right' : 'hide-right'}`} onClick={toggleNavbar}><GreetingsIcon />Part II: Greetings</Link>
+                    <Link to='/anthem' className={`no-highlight shadow flex-center-y ${isNavbarVisible ? 'show-right' : 'hide-right'}`} onClick={toggleNavbar}><AnthemIcon />Part III: Anthem</Link>
                 </div>
             )}
         </div >
