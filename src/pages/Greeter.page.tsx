@@ -1,4 +1,5 @@
 // Import React features
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
@@ -36,8 +37,23 @@ export const GreeterPage = () => {
     const prevGreeterId = greeterId > 1 ? greeterId - 1 : null;
     const nextGreeterId = greeterId < totalGreeters ? greeterId + 1 : null;
 
+    // Bypass hover for touch devices
+    const bypassHover = () => {
+        if ('ontouchstart' in document.documentElement) {
+            document.documentElement.classList.add('bypass-hover');
+        }
 
+        // Add the "no-hover" class to buttons when a touch screen device is detected
+        const buttons = document.querySelectorAll('.back, .previous, .next, .story');
+        buttons.forEach((button) => {
+            button.classList.add('no-hover');
+        });
+    };
 
+    // Calls bypassHover function when the component is mounted
+    useEffect(() => {
+        bypassHover();
+    }, []);
 
     // If greeter with matching ID is found:
     return (
