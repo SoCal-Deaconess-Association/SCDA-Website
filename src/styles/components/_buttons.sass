@@ -1,217 +1,44 @@
-// Continue to Part II
-.button-continue-part2
-    display: flex
-    justify-content: center
-    align-items: center
-    background-color: $color-pink-dark
-    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
+.button
+    padding: 15px
     border-radius: 10px
-    padding: 10px
     color: $color-white
-    font-size: 25px
+    font-size: 20px
     font-weight: bold
-    transition: padding-right 0.3s, background-color 0.3s, transform 0.3s
-    margin-top: 20px
+    letter-spacing: 1px
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.288)
+    display: flex
+    align-items: center
+    justify-content: center
 
     svg
-        position: absolute
-        height: 25px
-        width: 25px
-        margin-left: 10px
-        opacity: 0
-        filter: blur(5px)
-        transition: opacity 0.3s, transform 0.3s, filter 0.3s
-        transform: translateX(90px)
+        width: 30px
+        height: 30px
 
-    &:hover
-        background-color: $color-teal-light
-        padding-right: 50px
+    .spacer
+        width: 15px
 
-        svg
-            opacity: 1
-            filter: blur(0px)
-            transform: translateX(124px)
+.greetings
+    .button
+        font-size: 17px
+        width: 135px
 
-// Continue to Part III
-.button-continue-part3
-    display: flex
-    justify-content: center
-    align-items: center
-    background-color: $color-pink-dark
-    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
-    border-radius: 10px
-    padding: 10px
-    color: $color-white
-    font-size: 25px
-    font-weight: bold
-    transition: padding-right 0.3s, background-color 0.3s, transform 0.3s
-    margin: 4px 0 -14px 0
+.greeter-page
+    .button
+        font-size: 18px
+        padding: 10px
 
-    svg
-        position: absolute
-        height: 25px
-        width: 25px
-        margin-left: 10px
-        opacity: 0
-        filter: blur(5px)
-        transition: opacity 0.3s, transform 0.3s, filter 0.3s
-        transform: translateX(90px)
+    .back, .story
+        width: 250px
 
-    &:hover
-        background-color: $color-teal-light
-        padding-right: 50px
+    .row
+        display: flex
+        align-items: center
+        gap: 10px
 
-        svg
-            opacity: 1
-            filter: blur(0px)
-            transform: translateX(126px)
+        .prev-next
+            width: 120px
+            background-color: $color-pink
 
-// Back to Part I
-.button-back-part1
-    display: flex
-    justify-content: center
-    align-items: center
-    background-color: $color-pink-dark
-    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
-    border-radius: 10px
-    padding: 10px
-    color: $color-white
-    font-size: 25px
-    font-weight: bold
-    transition: padding-left 0.3s, background-color 0.3s, transform 0.3s
-    margin: 4px 0 -14px 0
-
-    svg
-        position: absolute
-        height: 25px
-        width: 25px
-        margin-left: 10px
-        opacity: 0
-        transition: opacity 0.3s, transform 0.3s, filter 0.3s
-        transform: translateX(-70px)
-        filter: blur(5px)
-
-    &:hover
-        background-color: $color-teal-light
-        padding-left: 46px
-
-        svg
-            opacity: 1
-            filter: blur(0px)
-            transform: translateX(-102px)
-
-// Back to Part II
-.button-back-part2
-    display: flex
-    justify-content: center
-    align-items: center
-    background-color: $color-pink-dark
-    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
-    border-radius: 10px
-    padding: 10px
-    color: $color-white
-    font-size: 25px
-    font-weight: bold
-    transition: padding-left 0.3s, background-color 0.3s, transform 0.3s
-    margin-top: 20px
-
-    svg
-        position: absolute
-        height: 25px
-        width: 25px
-        margin-left: 10px
-        opacity: 0
-        transition: opacity 0.3s, transform 0.3s, filter 0.3s
-        transform: translateX(-70px)
-        filter: blur(5px)
-
-    &:hover
-        background-color: $color-teal-light
-        padding-left: 50px
-
-        svg
-            opacity: 1
-            filter: blur(0px)
-            transform: translateX(-108px)
-
-// Part I
-.button-part1
-    display: flex
-    justify-content: center
-    align-items: center
-    background-color: $color-pink-dark
-    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
-    border-radius: 10px
-    padding: 10px
-    color: $color-white
-    font-size: 25px
-    font-weight: bold
-    transition: padding-left 0.3s, background-color 0.3s, transform 0.3s
-    margin: 4px 0 -14px 0
-    svg
-        position: absolute
-        height: 25px
-        width: 25px
-        margin-left: 10px
-        opacity: 0
-        transition: opacity 0.3s, transform 0.3s, filter 0.3s
-        transform: translateX(-18px)
-        filter: blur(5px)
-
-    &:hover
-        background-color: $color-teal-light
-        padding-left: 45px
-
-        svg
-            opacity: 1
-            filter: blur(0px)
-            transform: translateX(-57px)
-
-// Part III
-.button-part3
-    display: flex
-    justify-content: center
-    align-items: center
-    background-color: $color-pink-dark
-    box-shadow: 0 0 6px rgba(54, 55, 58, 0.277)
-    border-radius: 10px
-    padding: 10px
-    color: $color-white
-    font-size: 25px
-    font-weight: bold
-    transition: padding-right 0.3s, background-color 0.3s, transform 0.3s
-    margin: 4px 0 -14px 0
-
-    svg
-        position: absolute
-        height: 25px
-        width: 25px
-        margin-left: 10px
-        opacity: 0
-        transition: opacity 0.3s, transform 0.3s, filter 0.3s
-        transform: translateX(18px)
-        filter: blur(5px)
-
-    &:hover
-        background-color: $color-teal-light
-        padding-right: 48px
-
-        svg
-            opacity: 1
-            filter: blur(0px)
-            transform: translateX(56px)
-
-.greyed-out
-    opacity: 0.4
-    pointer-events: none
-
-@media screen and (max-width: 768px)
-    .button-part1, .button-part3
-        width: 126px
-
-        svg
-            display: none
-
-        &:hover
-            padding-left: 10px
-            padding-right: 10px
+    .greyed-out
+        filter: grayscale(80%)
+        opacity: 0.5

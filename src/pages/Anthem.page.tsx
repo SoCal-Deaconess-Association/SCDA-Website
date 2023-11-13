@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { VideoPlayer } from '../components/VideoPlayer';
 
 // import Images
-import BackIcon from '../assets/icons/BackIcon';
+import Arrow from '../assets/icons/ArrowIcon';
 
 export const AnthemPage = () => {
     return (
@@ -13,7 +13,7 @@ export const AnthemPage = () => {
             <h1>Part III: Anthem</h1>
             <div className='divider'></div>
             <VideoPlayer videoID={'ZPeF3wIwuUw'} />
-            <Link to='/greetings' className='button-back-part2 no-highlight'>Back to Part II<BackIcon /></Link>
+            <Link to='/greetings' className='button bg-teal no-highlight'><Arrow /><span className='spacer'></span>Back to Part II</Link>
         </div>
     );
 }

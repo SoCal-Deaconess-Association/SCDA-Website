@@ -1,22 +1,37 @@
-const SvgComponent = () => (
+const SvgComponent = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={600.156}
-    height={666.745}
-    fill="none"
-    viewBox="0 0 18.005 20.002"
+    width={1024.435}
+    height={1024.435}
+    viewBox="0 0 271.049 271.049"
+    {...props}
   >
-    <path
-      stroke="#000"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M1.002 17.002v-12.8c0-1.12 0-1.68.218-2.108a2 2 0 0 1 .874-.874c.428-.218.988-.218 2.108-.218h9.6c1.12 0 1.68 0 2.108.218a2 2 0 0 1 .874.874c.218.428.218.988.218 2.108v10.8h-14a2 2 0 0 0-2 2zm0 0a2 2 0 0 0 2 2h14m-11-14h6m-6 4h6m4 6v4"
-      style={{
-        stroke: "#eff8f9",
-        strokeOpacity: 1,
-      }}
-    />
+    <g transform="translate(73.53 20.905)">
+      <circle
+        cx={61.995}
+        cy={114.619}
+        r={135.524}
+        style={{
+          fill: "#f87d9a",
+          fillRule: "evenodd",
+          strokeWidth: 8.81936,
+          fillOpacity: 1,
+        }}
+      />
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={16.053}
+        d="M-2.217 170.805V68.065c0-8.99 0-13.486 1.75-16.92a16.052 16.052 0 0 1 7.015-7.016c3.434-1.75 7.929-1.75 16.92-1.75h77.055c8.99 0 13.486 0 16.92 1.75a16.051 16.051 0 0 1 7.015 7.016c1.75 3.434 1.75 7.93 1.75 16.92v86.687H13.836c-8.866 0-16.053 7.187-16.053 16.053zm0 0c0 8.866 7.187 16.053 16.053 16.053h112.372M37.915 74.486h48.16m-48.16 32.106h48.16m32.106 48.16v32.106"
+        style={{
+          fill: "none",
+          fillOpacity: 1,
+          stroke: "#eff8f9",
+          strokeOpacity: 1,
+        }}
+      />
+    </g>
   </svg>
 )
 export default SvgComponent

@@ -6,8 +6,8 @@ import { useMediaQuery } from 'react-responsive';
 // Import components
 import { VideoPlayer } from '../components/VideoPlayer';
 
-import StoryIcon from '../assets/icons/StoryIcon';
-import BackIcon from '../assets/icons/BackIcon2';
+import Story from '../assets/icons/StoryIcon';
+import Arrow from '../assets/icons/ArrowIcon';
 
 // Import utils
 import { Greeters } from '../utils/greeters.utils';
@@ -66,37 +66,34 @@ export const GreeterPage = () => {
                 <div className='content-left'>
                     <VideoPlayer videoID={greeter.video} />
                     <div className='buttons'>
+                        <Link to='/greetings' className="back button bg-teal-dark no-highlight">
+                            <Arrow /><span className='spacer'></span>Greeters
+                        </Link>
+
                         <div className='row'>
-                            <Link to='/greetings no-highlight' className="back">
-                                <BackIcon />Back to Greeters
-                            </Link>
-
-                            {flexBreak && (
-                                <div className='flex-break'></div>
-                            )}
-
                             {prevGreeterId !== null ? (
-                                <Link to={`/greetings/${prevGreeterId}`} className="previous no-highlight">
+                                <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
                                     Previous
                                 </Link>
                             ) : (
-                                <span className='previous greyed-out'>
+                                <span className='prev-next button greyed-out'>
                                     Previous
                                 </span>
                             )}
 
                             {nextGreeterId !== null ? (
-                                <Link to={`/greetings/${nextGreeterId}`} className="next no-highlight">
+                                <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
                                     Next
                                 </Link>
                             ) : (
-                                <span className='previous greyed-out'>
+                                <span className='prev-next button greyed-out'>
                                     Next
                                 </span>
                             )}
                         </div>
-                        <Link to={`/greetings/${greeter.id}/story`} className='story no-highlight'>
-                            <StoryIcon />Story
+
+                        <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
+                            <Story /><span className='spacer'></span>Story
                         </Link>
                     </div>
                 </div>

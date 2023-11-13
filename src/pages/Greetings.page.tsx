@@ -4,8 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 
 // Import components
 import TableRow from '../components/TableRow';
-import BackIcon from '../assets/icons/BackIcon';
-import ContinueIcon from '../assets/icons/ContinueIcon';
+import Arrow from '../assets/icons/ArrowIcon';
 
 // Import utils
 import { Greeters } from '../utils/greeters.utils';
@@ -39,20 +38,10 @@ export const GreetingsPage = () => {
                 </div>
                 <div className='table-footer shadow'>
                     <div className='table-cell'>
-                        {isMobile && (
-                            <Link to='/' className='button-part1 no-highlight'>Part I<BackIcon /></Link>
-                        )}
-                        {!isMobile && (
-                            <Link to='/' className='button-back-part1 no-highlight'>Back to Part I<BackIcon /></Link>
-                        )}
+                        <Link to='/' className='button bg-teal no-highlight'><Arrow /><span className='spacer'></span>Part I</Link>
                     </div>
                     <div className='table-cell'>
-                        {isMobile && (
-                            <Link to='/anthem' className='button-part3 no-highlight'>Part III<ContinueIcon /></Link>
-                        )}
-                        {!isMobile && (
-                            <Link to='/anthem' className='button-continue-part3 no-highlight'>Continue to Part III<ContinueIcon /></Link>
-                        )}
+                        <Link to='/anthem' className='button bg-teal no-highlight'>Part III<span className='spacer'></span><Arrow className='flip-horizontally' /></Link>
                     </div>
                 </div>
             </div>
