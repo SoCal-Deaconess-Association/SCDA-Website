@@ -15,7 +15,9 @@ import { Greeters } from '../utils/greeters.utils';
 export const GreeterPage = () => {
     // Responsive breakpoints
     const isMobile = useMediaQuery({ maxWidth: 767 });
-    const flexBreak = useMediaQuery({ maxWidth: 830 });
+    // Button Arrangements
+    const buttonsSizeSmall = useMediaQuery({ maxWidth: 450 });
+    const buttonsSizeMedium = useMediaQuery({ maxWidth: 600 });
 
     const { id } = useParams();
 
@@ -37,24 +39,6 @@ export const GreeterPage = () => {
     const prevGreeterId = greeterId > 1 ? greeterId - 1 : null;
     const nextGreeterId = greeterId < totalGreeters ? greeterId + 1 : null;
 
-    // Bypass hover for touch devices
-    const bypassHover = () => {
-        if ('ontouchstart' in document.documentElement) {
-            document.documentElement.classList.add('bypass-hover');
-        }
-
-        // Add the "no-hover" class to buttons when a touch screen device is detected
-        const buttons = document.querySelectorAll('.back, .previous, .next, .story');
-        buttons.forEach((button) => {
-            button.classList.add('no-hover');
-        });
-    };
-
-    // Calls bypassHover function when the component is mounted
-    useEffect(() => {
-        bypassHover();
-    }, []);
-
     // If greeter with matching ID is found:
     return (
         <div className='greeter-page card shadow'>
@@ -65,36 +49,112 @@ export const GreeterPage = () => {
                 {/* Content Left */}
                 <div className='content-left'>
                     <VideoPlayer videoID={greeter.video} />
-                    <div className='buttons'>
-                        <Link to='/greetings' className="back button bg-teal-dark no-highlight">
-                            <Arrow /><span className='spacer'></span>Greeters
-                        </Link>
-
-                        <div className='row'>
-                            {prevGreeterId !== null ? (
-                                <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
-                                    Previous
+                    <div className='bg'>
+                        {/* Small Button Arrangement */}
+                        {buttonsSizeSmall && (
+                            <div className='buttons'>
+                                <Link to='/greetings' className="back button bg-teal-dark no-highlight">
+                                    <Arrow /><span className='spacer'></span>Greeters
                                 </Link>
-                            ) : (
-                                <span className='prev-next button greyed-out'>
-                                    Previous
-                                </span>
-                            )}
 
-                            {nextGreeterId !== null ? (
-                                <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
-                                    Next
+                                <div className='row'>
+                                    {prevGreeterId !== null ? (
+                                        <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
+                                            Previous
+                                        </Link>
+                                    ) : (
+                                        <span className='prev-next button greyed-out'>
+                                            Previous
+                                        </span>
+                                    )}
+
+                                    {nextGreeterId !== null ? (
+                                        <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
+                                            Next
+                                        </Link>
+                                    ) : (
+                                        <span className='prev-next button greyed-out'>
+                                            Next
+                                        </span>
+                                    )}
+                                </div>
+
+                                <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
+                                    <Story /><span className='spacer'></span>Story
                                 </Link>
-                            ) : (
-                                <span className='prev-next button greyed-out'>
-                                    Next
-                                </span>
-                            )}
-                        </div>
+                            </div>
+                        )}
 
-                        <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
-                            <Story /><span className='spacer'></span>Story
-                        </Link>
+                        {/* Medium Button Arrangement */}
+                        {buttonsSizeMedium && !buttonsSizeSmall && (
+                            <div className='buttons'>
+                                <div className='row'>
+                                    <Link to='/greetings' className="back button bg-teal-dark no-highlight">
+                                        <Arrow /><span className='spacer'></span>Greeters
+                                    </Link>
+                                    <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
+                                        <Story /><span className='spacer'></span>Story
+                                    </Link>
+                                </div>
+
+                                <div className='row'>
+                                    {prevGreeterId !== null ? (
+                                        <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
+                                            Previous
+                                        </Link>
+                                    ) : (
+                                        <span className='prev-next button greyed-out'>
+                                            Previous
+                                        </span>
+                                    )}
+
+                                    {nextGreeterId !== null ? (
+                                        <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
+                                            Next
+                                        </Link>
+                                    ) : (
+                                        <span className='prev-next button greyed-out'>
+                                            Next
+                                        </span>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Large Button Arrangement */}
+                        {!buttonsSizeMedium && !buttonsSizeSmall && (
+                            <div className='buttons'>
+                                <div className='row'>
+                                    <Link to='/greetings' className="back button bg-teal-dark no-highlight">
+                                        <Arrow /><span className='spacer'></span>Greeters
+                                    </Link>
+
+                                    {prevGreeterId !== null ? (
+                                        <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
+                                            Previous
+                                        </Link>
+                                    ) : (
+                                        <span className='prev-next button greyed-out'>
+                                            Previous
+                                        </span>
+                                    )}
+
+                                    {nextGreeterId !== null ? (
+                                        <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
+                                            Next
+                                        </Link>
+                                    ) : (
+                                        <span className='prev-next button greyed-out'>
+                                            Next
+                                        </span>
+                                    )}
+
+                                    <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
+                                        <Story /><span className='spacer'></span>Story
+                                    </Link>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 

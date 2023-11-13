@@ -11,17 +11,22 @@
     .content-left
         padding-right: 10px
         width: 75%
+        display: flex
+        flex-direction: column
+        justify-content: center
 
-        .buttons
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
+        .bg
             background-color: #d0e3e3
             border-radius: 10px
             box-shadow: inset 0 2px 7px rgba(54, 55, 58, 0.216)
-            gap: 10px
-            padding: 10px
+
+            .buttons
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                gap: 10px
+                padding: 10px
 
     .content-right
         padding-top: 10px
@@ -69,12 +74,7 @@
 @media screen and (max-width: 830px)
     .greeter-page
         .content-left
-
-            .back
-                margin-bottom: -20px
-
             .previous
                 width: 132px
-
             .next
                 width: 88px
