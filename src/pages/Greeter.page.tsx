@@ -1,6 +1,6 @@
 // Import React features
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 // Import components
@@ -39,6 +39,24 @@ export const GreeterPage = () => {
     const prevGreeterId = greeterId > 1 ? greeterId - 1 : null;
     const nextGreeterId = greeterId < totalGreeters ? greeterId + 1 : null;
 
+    const navigate = useNavigate();
+
+    const greetingsPage = () => {
+        navigate('/greetings');
+    };
+
+    const prevGreeterPage = () => {
+        navigate(`/greetings/${prevGreeterId}`);
+    }
+
+    const nextGreeterPage = () => {
+        navigate(`/greetings/${nextGreeterId}`);
+    }
+
+    const StoryPage = () => {
+        navigate(`/greetings/${greeter.id}/story`);
+    }
+
     // If greeter with matching ID is found:
     return (
         <div className='greeter-page card shadow'>
@@ -53,15 +71,23 @@ export const GreeterPage = () => {
                         {/* Small Button Arrangement */}
                         {buttonsSizeSmall && (
                             <div className='buttons'>
-                                <Link to='/greetings' className="back button bg-teal-dark no-highlight">
-                                    <Arrow /><span className='spacer'></span>Greeters
-                                </Link>
+                                <button
+                                    onClick={greetingsPage}
+                                    className="back button bg-teal-dark no-highlight"
+                                >
+                                    <Arrow />
+                                    <span className='spacer'></span>
+                                    Greeters
+                                </button>
 
                                 <div className='row'>
                                     {prevGreeterId !== null ? (
-                                        <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
+                                        <button
+                                            onClick={prevGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
                                             Previous
-                                        </Link>
+                                        </button>
                                     ) : (
                                         <span className='prev-next button greyed-out'>
                                             Previous
@@ -69,9 +95,12 @@ export const GreeterPage = () => {
                                     )}
 
                                     {nextGreeterId !== null ? (
-                                        <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
+                                        <button
+                                            onClick={nextGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
                                             Next
-                                        </Link>
+                                        </button>
                                     ) : (
                                         <span className='prev-next button greyed-out'>
                                             Next
@@ -79,9 +108,14 @@ export const GreeterPage = () => {
                                     )}
                                 </div>
 
-                                <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
-                                    <Story /><span className='spacer'></span>Story
-                                </Link>
+                                <button
+                                    onClick={StoryPage}
+                                    className='story button bg-pink-dark no-highlight'
+                                >
+                                    <Story />
+                                    <span className='spacer'></span>
+                                    Story
+                                </button>
                             </div>
                         )}
 
@@ -89,19 +123,33 @@ export const GreeterPage = () => {
                         {buttonsSizeMedium && !buttonsSizeSmall && (
                             <div className='buttons'>
                                 <div className='row'>
-                                    <Link to='/greetings' className="back button bg-teal-dark no-highlight">
-                                        <Arrow /><span className='spacer'></span>Greeters
-                                    </Link>
-                                    <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
-                                        <Story /><span className='spacer'></span>Story
-                                    </Link>
+                                    <button
+                                        onClick={greetingsPage}
+                                        className="back button bg-teal-dark no-highlight"
+                                    >
+                                        <Arrow />
+                                        <span className='spacer'></span>
+                                        Greeters
+                                    </button>
+
+                                    <button
+                                        onClick={StoryPage}
+                                        className='story button bg-pink-dark no-highlight'
+                                    >
+                                        <Story />
+                                        <span className='spacer'></span>
+                                        Story
+                                    </button>
                                 </div>
 
                                 <div className='row'>
                                     {prevGreeterId !== null ? (
-                                        <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
+                                        <button
+                                            onClick={prevGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
                                             Previous
-                                        </Link>
+                                        </button>
                                     ) : (
                                         <span className='prev-next button greyed-out'>
                                             Previous
@@ -109,9 +157,12 @@ export const GreeterPage = () => {
                                     )}
 
                                     {nextGreeterId !== null ? (
-                                        <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
+                                        <button
+                                            onClick={nextGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
                                             Next
-                                        </Link>
+                                        </button>
                                     ) : (
                                         <span className='prev-next button greyed-out'>
                                             Next
@@ -125,14 +176,22 @@ export const GreeterPage = () => {
                         {!buttonsSizeMedium && !buttonsSizeSmall && (
                             <div className='buttons'>
                                 <div className='row'>
-                                    <Link to='/greetings' className="back button bg-teal-dark no-highlight">
-                                        <Arrow /><span className='spacer'></span>Greeters
-                                    </Link>
+                                    <button
+                                        onClick={greetingsPage}
+                                        className="back button bg-teal-dark no-highlight"
+                                    >
+                                        <Arrow />
+                                        <span className='spacer'></span>
+                                        Greeters
+                                    </button>
 
                                     {prevGreeterId !== null ? (
-                                        <Link to={`/greetings/${prevGreeterId}`} className="prev-next button no-highlight">
+                                        <button
+                                            onClick={prevGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
                                             Previous
-                                        </Link>
+                                        </button>
                                     ) : (
                                         <span className='prev-next button greyed-out'>
                                             Previous
@@ -140,18 +199,26 @@ export const GreeterPage = () => {
                                     )}
 
                                     {nextGreeterId !== null ? (
-                                        <Link to={`/greetings/${nextGreeterId}`} className="prev-next button no-highlight">
+                                        <button
+                                            onClick={nextGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
                                             Next
-                                        </Link>
+                                        </button>
                                     ) : (
                                         <span className='prev-next button greyed-out'>
                                             Next
                                         </span>
                                     )}
 
-                                    <Link to={`/greetings/${greeter.id}/story`} className='story button bg-pink-dark no-highlight'>
-                                        <Story /><span className='spacer'></span>Story
-                                    </Link>
+                                    <button
+                                        onClick={StoryPage}
+                                        className='story button bg-pink-dark no-highlight'
+                                    >
+                                        <Story />
+                                        <span className='spacer'></span>
+                                        Story
+                                    </button>
                                 </div>
                             </div>
                         )}

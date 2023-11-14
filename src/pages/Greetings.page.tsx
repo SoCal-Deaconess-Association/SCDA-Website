@@ -1,5 +1,5 @@
 // Import React features
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 import { useMediaQuery } from 'react-responsive';
 
 // Import components
@@ -11,6 +11,16 @@ import { Greeters } from '../utils/greeters.utils';
 
 export const GreetingsPage = () => {
     const isMobile = useMediaQuery({ maxWidth: 590 });
+
+    const navigate = useNavigate();
+
+    const historyPage = () => {
+        navigate('/');
+    };
+
+    const anthemPage = () => {
+        navigate('/anthem');
+    }
 
     return (
         <div className='card shadow greetings'>
@@ -31,17 +41,33 @@ export const GreetingsPage = () => {
                         <h3>View Greeting & Story</h3>
                     </div>
                 </div>
+
                 <div className='table-rows custom-scrollbar'>
                     {Greeters.map((greeter) => (
                         <TableRow key={greeter.id} greeter={greeter} />
                     ))}
                 </div>
+
                 <div className='table-footer shadow'>
                     <div className='table-cell'>
-                        <Link to='/' className='button bg-teal no-highlight'><Arrow /><span className='spacer'></span>Part I</Link>
+                        <button
+                            onClick={historyPage}
+                            className='button bg-teal no-highlight'
+                        >
+                            <Arrow />
+                            <span className='spacer'></span>
+                            Part I
+                        </button>
                     </div>
                     <div className='table-cell'>
-                        <Link to='/anthem' className='button bg-teal no-highlight'>Part III<span className='spacer'></span><Arrow className='flip-horizontally' /></Link>
+                        <button
+                            onClick={anthemPage}
+                            className='button bg-teal no-highlight'
+                        >
+                            Part III
+                            <span className='spacer'></span>
+                            <Arrow className='flip-horizontally' />
+                        </button>
                     </div>
                 </div>
             </div>

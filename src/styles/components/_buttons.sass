@@ -9,6 +9,8 @@
     display: flex
     align-items: center
     justify-content: center
+    cursor: pointer
+    border: none
 
     svg
         width: 30px
@@ -17,10 +19,23 @@
     .spacer
         width: 15px
 
+.anthem-page
+    .button
+        &:active
+            background-color: darken($color-teal-dark, 10%)
+
+.history-page
+    .button
+        &:active
+            background-color: darken($color-teal-dark, 10%)
+
 .greetings
     .button
         font-size: 17px
         width: 135px
+
+        &:active
+            background-color: darken($color-teal-dark, 10%)
 
 .greeter-page
     .button
@@ -41,6 +56,6 @@
             background-color: $color-pink
             height: 50px
 
-    .greyed-out
-        filter: grayscale(80%)
-        opacity: 0.5
+.greyed-out
+    filter: grayscale(50%)
+    opacity: 0.5

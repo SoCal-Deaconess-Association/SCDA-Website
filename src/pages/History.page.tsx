@@ -1,5 +1,5 @@
 // React features
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 
 // Components
 import { VideoPlayer } from '../components/VideoPlayer';
@@ -8,12 +8,22 @@ import { VideoPlayer } from '../components/VideoPlayer';
 import Arrow from '../assets/icons/ArrowIcon';
 
 export const HistoryPage = () => {
+    const navigate = useNavigate();
+
+    const greetingsPage = () => {
+        navigate('/greetings');
+    };
+
     return (
-        <div className='card shadow'>
+        <div className='history-page card shadow'>
             <h1>Part I: History</h1>
             <div className='divider'></div>
             <VideoPlayer videoID={'ih3YX4Abh4g'} />
-            <Link to='/greetings' className='button bg-teal no-highlight'>Continue to Part II<span className='spacer'></span><Arrow className='flip-horizontally' /></Link>
+            <button className='button bg-teal no-highlight' onClick={greetingsPage}>
+                Continue to Part II
+                <span className='spacer'></span>
+                <Arrow className='flip-horizontally' />
+            </button>
         </div>
     );
 }
