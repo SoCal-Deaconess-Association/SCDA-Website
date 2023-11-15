@@ -1,6 +1,5 @@
 // Import React features
-import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 // Import components

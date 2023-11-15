@@ -1,6 +1,5 @@
 // Import React features
-import { Link, useNavigate } from "react-router";
-import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from "react-router";
 
 // Import components
 import TableRow from '../components/TableRow';
@@ -10,8 +9,6 @@ import Arrow from '../assets/icons/ArrowIcon';
 import { Greeters } from '../utils/greeters.utils';
 
 export const GreetingsPage = () => {
-    const isMobile = useMediaQuery({ maxWidth: 590 });
-
     const navigate = useNavigate();
 
     const historyPage = () => {

@@ -51,10 +51,21 @@
         width: 100%
         gap: 10px
 
+        .back
+            &:active
+                background-color: darken($color-teal-dark, 10%)
+
+        .story
+            &:active
+                background-color: darken($color-pink-dark, 10%)
+
         .prev-next
             width: 100%
             background-color: $color-pink
             height: 50px
+
+            &:active
+                background-color: darken($color-pink, 5%)
 
 .greyed-out
     filter: grayscale(50%)

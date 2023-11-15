@@ -1,5 +1,5 @@
 // React features
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 // Components
 import { VideoPlayer } from '../components/VideoPlayer';
