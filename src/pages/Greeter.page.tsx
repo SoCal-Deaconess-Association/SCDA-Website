@@ -88,7 +88,7 @@ export const GreeterPage = () => {
                                             Previous
                                         </button>
                                     ) : (
-                                        <span className='prev-next button greyed-out'>
+                                        <span className='prev-next button no-highlight greyed-out'>
                                             Previous
                                         </span>
                                     )}
@@ -101,7 +101,7 @@ export const GreeterPage = () => {
                                             Next
                                         </button>
                                     ) : (
-                                        <span className='prev-next button greyed-out'>
+                                        <span className='prev-next button no-highlight greyed-out'>
                                             Next
                                         </span>
                                     )}
@@ -150,7 +150,7 @@ export const GreeterPage = () => {
                                             Previous
                                         </button>
                                     ) : (
-                                        <span className='prev-next button greyed-out'>
+                                        <span className='prev-next button no-highlight greyed-out'>
                                             Previous
                                         </span>
                                     )}
@@ -163,7 +163,7 @@ export const GreeterPage = () => {
                                             Next
                                         </button>
                                     ) : (
-                                        <span className='prev-next button greyed-out'>
+                                        <span className='prev-next button no-highlight greyed-out'>
                                             Next
                                         </span>
                                     )}
@@ -192,7 +192,7 @@ export const GreeterPage = () => {
                                             Previous
                                         </button>
                                     ) : (
-                                        <span className='prev-next button greyed-out'>
+                                        <span className='prev-next button no-highlight greyed-out'>
                                             Previous
                                         </span>
                                     )}
@@ -205,7 +205,7 @@ export const GreeterPage = () => {
                                             Next
                                         </button>
                                     ) : (
-                                        <span className='prev-next button greyed-out'>
+                                        <span className='prev-next button no-highlight greyed-out'>
                                             Next
                                         </span>
                                     )}

@@ -12,7 +12,7 @@ const SvgComponent: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
         cy={114.619}
         r={135.524}
         style={{
-          fill: "#f87d9a",
+          fill: "#72c0bc",
           fillRule: "evenodd",
           strokeWidth: 8.81936,
           fillOpacity: 1,
