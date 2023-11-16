@@ -19,9 +19,14 @@
         background-color: $color-pink
         padding: 10px
         display: flex
+        transition: background-color 0.1s ease-in-out
 
         &:active
             background-color: darken($color-pink, 5%)
+
+        @media(pointer: fine)
+            &:hover
+                background-color: darken($color-pink, 5%)
 
     .back
         background-color: $color-teal-dark
@@ -31,6 +36,10 @@
 
         &:active
             background-color: darken($color-teal-dark, 10%)
+
+        @media(pointer: fine)
+            &:hover
+                background-color: darken($color-teal-dark, 5%)
 
         svg
             height: 24px
