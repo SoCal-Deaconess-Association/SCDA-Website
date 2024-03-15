@@ -22,7 +22,7 @@
 5. [Contact Information](#contact-information)
 
 ## Description
-The official website for the Southern California Deaconess Association is crafted with React.js for the front-end and styled using SASS. This website adopts responsive web design principles to ensure seamless display across all devices.
+The official website for the Southern California Deaconess Association is crafted with React.js for the front-end and styled using SASS. This website adopts responsive web design principles to ensure seamless display across all devices. Videos are embedded using the `react-youtube` package.
 
 <div align="center">
     <h3>Desktop View</h3>
@@ -34,6 +34,16 @@ The official website for the Southern California Deaconess Association is crafte
 </div>
 
 ## Usage
+### Method 1: Running Locally
+To run locally, clone the repository and run the following commands:
+```bash
+yarn install
+yarn dev
+```
+You can then view the website at `localhost:5173`
+
+### Method 2: Viewing the Website
+
 You can view the website at [https://socaldeaconess.com](https://socaldeaconess.org)
 
 ## Technologies Used
