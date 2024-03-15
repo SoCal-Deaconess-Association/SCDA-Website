@@ -40,11 +40,11 @@ To run locally, clone the repository and run the following commands:
 yarn install
 yarn dev
 ```
-You can then view the website at `localhost:5173`
+You can then view the local website at `localhost:5173`
 
 ### Method 2: Viewing the Website
 
-You can view the website at [https://socaldeaconess.com](https://socaldeaconess.org)
+You can view the live website at [https://socaldeaconess.com](https://socaldeaconess.org)
 
 ## Technologies Used
 * React.js
