@@ -1,5 +1,5 @@
 <div align="center" style="display: flex; align-items: center; justify-content: center;">
-    <h1 style="font-size: 25px"><span><img width="40px" height="auto" style="margin-right: 10px" src="https://github.com/SoCal-Deaconess-Association/scda-v2/assets/59628271/9b7c9fe8-4f69-45d8-b4ea-1e3329aaab63" alt="Atara Ara"></span>Southern California Deaconess Association</h1>
+    <h1 style="font-size: 25px"><span><img width="40px" height="auto" src="https://github.com/SoCal-Deaconess-Association/scda-v2/assets/59628271/9b7c9fe8-4f69-45d8-b4ea-1e3329aaab63" alt="Atara Ara"></span>  Southern California Deaconess Association</h1>
 </div>
 
 
