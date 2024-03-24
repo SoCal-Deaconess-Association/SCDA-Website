@@ -44,7 +44,7 @@ You can then view the local website at `localhost:5173`
 
 ### Method 2: Viewing the Website
 
-You can view the live website at [https://socaldeaconess.com](https://socaldeaconess.org)
+You can view the live website at [https://socaldeaconess.com](https://socaldeaconess.com)
 
 ## Technologies Used
 * React.js
