@@ -6,6 +6,41 @@
     max-width: 100%
     padding-top: 20px
     padding-bottom: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px
+
+    button
+        background-color: $color-pink-dark
+        border: none
+        cursor: pointer
+        outline: none
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 15px
+        border-radius: 10px
+        color: $color-white
+        font-size: 20px
+        font-weight: bold
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.288)
+        transition: background-color 0.1s ease-in-out
+
+        svg
+            width: 25px
+            height: auto
+            margin-left: 10px
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1))
+
+        &:active
+            background-color: darken($color-pink-dark, 4%)
+            filter: saturate(90%)
+
+        @media(pointer: fine)
+            &:hover
+                background-color: darken($color-pink-dark, 4%)
+                filter: saturate(90%)
 
 .youtube-player
     position: relative
