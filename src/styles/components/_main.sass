@@ -32,3 +32,13 @@ main
         background-color: $color-gray-light
         height: 2px
         width: 100%
+
+// For mobile landscape mode
+@media only screen and (max-width: 915px) and (orientation: landscape)
+    .card
+        padding: 10px
+        width: calc(100% - 20px)
+        max-height: calc(100vh - 60px)
+
+        h1
+            font-size: 20px
