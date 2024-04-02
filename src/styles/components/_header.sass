@@ -127,3 +127,41 @@
 
 .hide-right
     transform: translateX(100%)
+
+// For mobile landscape mode
+@media only screen and (max-width: 915px) and (orientation: landscape)
+    .header
+        height: 40px
+
+        .logo
+            width: 220px
+
+            svg
+                width: 20px
+                height: 30px
+                margin: 5px
+
+            p
+                font-size: 12px
+
+        .hamburger-button
+            width: 40px
+            height: 40px
+
+        .close-button
+            width: 45px
+            height: 45px
+            margin-right: 5px
+
+    .nav-mobile
+        top: 42px
+        font-size: 20px
+
+        a
+            margin: 4px 0 4px 20px
+            padding: 8px 15px
+
+            svg
+                width: 40px
+                height: 40px
+                margin-right: 5px
