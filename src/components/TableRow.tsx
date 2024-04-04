@@ -28,7 +28,7 @@ const TableRow: React.FC<TableRowProps> = ({ greeter }) => {
                 <p>{greeter.province}</p>
             </div>
             <div className='table-cell'>
-                <Link to={`/greetings/${greeter.id}`} className='no-highlight'>
+                <Link to={`/greetings/${greeter.id}`} className='no-highlight view-greeting'>
                     <PlayIcon />
                 </Link>
             </div>
