@@ -78,3 +78,28 @@
                 width: 132px
             .next
                 width: 88px
+
+    // For mobile landscape mode
+@media only screen and (max-width: 1023px) and (orientation: landscape)
+    .greeter-page
+        h1
+            font-size: 20px
+
+        h2
+            font-size: 14px
+
+        .content
+            height: 100vh
+
+            .content-left
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+
+                width: 100%
+                min-height: 100%
+
+                .video-player-container
+                    width: calc(110vh - 40px)
+                    margin-right: 20px

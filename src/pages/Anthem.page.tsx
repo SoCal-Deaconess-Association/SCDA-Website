@@ -16,6 +16,7 @@ export const AnthemPage = () => {
 
     const toggleFullscreen = () => {
         setIsFullscreen(!isFullscreen);
+        console.log('Fullscreen:');
     };
 
     const greetingsPage = () => {
@@ -28,7 +29,6 @@ export const AnthemPage = () => {
         };
 
         updateOrientation();
-
         window.addEventListener('resize', updateOrientation);
 
         return () => {
@@ -43,7 +43,10 @@ export const AnthemPage = () => {
             <div className='content-container'>
                 <VideoPlayer videoID={'ZPeF3wIwuUw'} onToggleFullscreen={toggleFullscreen} />
                 <div className='button-container'>
-                    <button className='button-fullscreen' onClick={toggleFullscreen}>
+                    <button
+                        onClick={toggleFullscreen}
+                        className='button-fullscreen'
+                    >
                         Fullscreen <FullscreenIcon color1='#e66489' color2='#eff8f9' />
                     </button>
                     <button

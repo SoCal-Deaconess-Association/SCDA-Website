@@ -14,6 +14,8 @@ import { Greeters } from '../utils/greeters.utils';
 export const GreeterPage = () => {
     // Responsive breakpoints
     const isMobile = useMediaQuery({ maxWidth: 767 });
+    const isMobileLandscape = useMediaQuery({ maxWidth: 1023, orientation: 'landscape' });
+
     // Button Arrangements
     const buttonsSizeSmall = useMediaQuery({ maxWidth: 450 });
     const buttonsSizeMedium = useMediaQuery({ maxWidth: 600 });
@@ -172,7 +174,7 @@ export const GreeterPage = () => {
                         )}
 
                         {/* Large Button Arrangement */}
-                        {!buttonsSizeMedium && !buttonsSizeSmall && (
+                        {!isMobileLandscape && (!buttonsSizeMedium && !buttonsSizeSmall) && (
                             <div className='buttons'>
                                 <div className='row'>
                                     <button
@@ -221,10 +223,61 @@ export const GreeterPage = () => {
                                 </div>
                             </div>
                         )}
+
+                        {/* Buttons for Mobile in Landscape Mode */}
+                        {isMobileLandscape && (
+                            <div className='buttons mobile-landscape'>
+                                <button
+                                    onClick={greetingsPage}
+                                    className="back button bg-teal-dark no-highlight"
+                                >
+                                    <Arrow />
+                                    <span className='spacer'></span>
+                                    Greeters
+                                </button>
+
+                                <button
+                                    onClick={StoryPage}
+                                    className='story button bg-pink-dark no-highlight'
+                                >
+                                    <Story />
+                                    <span className='spacer'></span>
+                                    Story
+                                </button>
+
+                                <div className='row'>
+                                    {prevGreeterId !== null ? (
+                                        <button
+                                            onClick={prevGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
+                                            Previous
+                                        </button>
+                                    ) : (
+                                        <span className='prev-next button no-highlight greyed-out'>
+                                            Previous
+                                        </span>
+                                    )}
+
+                                    {nextGreeterId !== null ? (
+                                        <button
+                                            onClick={nextGreeterPage}
+                                            className="prev-next button no-highlight"
+                                        >
+                                            Next
+                                        </button>
+                                    ) : (
+                                        <span className='prev-next button no-highlight greyed-out'>
+                                            Next
+                                        </span>
+                                    )}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 
-                {!isMobile && (
+                {!isMobileLandscape && !isMobile && (
                     /* Content Right */
                     <div className='content-right'>
                         <h2>Deaconess Concentration of Work</h2>
