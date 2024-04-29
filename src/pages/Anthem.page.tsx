@@ -7,17 +7,10 @@ import { VideoPlayer } from '../components/VideoPlayer';
 
 // Images
 import Arrow from '../assets/icons/ArrowIcon';
-import FullscreenIcon from '../assets/icons/FullscreenIcon';
 
 export const AnthemPage = () => {
     const navigate = useNavigate();
-    const [isFullscreen, setIsFullscreen] = useState(false);
     const [isLandscape, setIsLandscape] = useState(false);
-
-    const toggleFullscreen = () => {
-        setIsFullscreen(!isFullscreen);
-        console.log('Fullscreen:');
-    };
 
     const greetingsPage = () => {
         navigate('/greetings');
@@ -41,14 +34,8 @@ export const AnthemPage = () => {
             <h1>Part III: Anthem</h1>
             <div className='divider'></div>
             <div className='content-container'>
-                <VideoPlayer videoID={'ZPeF3wIwuUw'} onToggleFullscreen={toggleFullscreen} />
+                <VideoPlayer videoID={'ZPeF3wIwuUw'} />
                 <div className='button-container'>
-                    <button
-                        onClick={toggleFullscreen}
-                        className='button-fullscreen'
-                    >
-                        Fullscreen <FullscreenIcon color1='#e66489' color2='#eff8f9' />
-                    </button>
                     <button
                         onClick={greetingsPage}
                         className='button bg-teal no-highlight'

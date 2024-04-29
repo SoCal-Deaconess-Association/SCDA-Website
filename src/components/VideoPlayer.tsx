@@ -3,7 +3,6 @@ import YouTube from 'react-youtube';
 
 type VideoPlayerProps = {
     videoID: string;
-    onToggleFullscreen: () => void;
 };
 
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoID }) => {

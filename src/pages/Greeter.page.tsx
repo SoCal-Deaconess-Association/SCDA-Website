@@ -236,15 +236,6 @@ export const GreeterPage = () => {
                                     Greeters
                                 </button>
 
-                                <button
-                                    onClick={StoryPage}
-                                    className='story button bg-pink-dark no-highlight'
-                                >
-                                    <Story />
-                                    <span className='spacer'></span>
-                                    Story
-                                </button>
-
                                 <div className='row'>
                                     {prevGreeterId !== null ? (
                                         <button
@@ -272,6 +263,17 @@ export const GreeterPage = () => {
                                         </span>
                                     )}
                                 </div>
+
+                                <button
+                                    onClick={StoryPage}
+                                    className='story button bg-pink-dark no-highlight'
+                                >
+                                    <Story />
+                                    <span className='spacer'></span>
+                                    Story
+                                </button>
+
+
                             </div>
                         )}
                     </div>
